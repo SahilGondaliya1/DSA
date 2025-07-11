@@ -1,17 +1,14 @@
 public class bubbleSort{
-    public void bubbleSortArray(int[] array){
-
-        for(int i = 0 ; i < array.length ; i++){
-           int min = i;
-            for(int j = i ; j < array.length; j++){
-                if(array[min] > array[j]){
-                    min = j;
+    public void bubbleSortArray(int[] arr){
+        for(int i = 0 ; i < arr.length ; i++){
+            for(int j = 0 ; j < arr.length-1; j++){
+                if(arr[j]>arr[j+1]){
+                    swap(arr, j, j+1);
                 }
             }
-            swap(array,min,i);
         }
-
     }
+
     static void swap(int[] array , int min, int index){
         int temp = array[min];
         array[min] = array[index];
